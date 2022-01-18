@@ -29,12 +29,5 @@
     <ProjectReference Include="..\OpenApiVersionDemo.Common\OpenApiVersionDemo.Common.csproj" />
     <ProjectReference Include="..\OpenApiVersionDemo.Services\OpenApiVersionDemo.Services.csproj" />
   </ItemGroup>
-	
-  <ItemGroup>
-    <None Remove="Properties\launchSettings.json.envt" />
-    <Content Include="Properties\launchSettings.json.envt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 
 </Project>
