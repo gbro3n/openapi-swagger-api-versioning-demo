@@ -100,9 +100,6 @@ builder.Services.AddApiVersioning(o =>
     }
 });
 
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -113,7 +110,7 @@ builder.Services.AddSwaggerGen(options =>
         options.SwaggerDoc(apiVersionDescriptor.VersionShort, new OpenApiInfo { Title = apiVersionDescriptor.VersionFull, Version = apiVersionDescriptor.VersionShort });
     }
 
-    // Enabling bearer token auth in Swagger UI https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/1425 (zscao commented on 31 Mar 2020)
+    // Enabling bearer token auth in Swagger UI
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
@@ -214,8 +211,6 @@ app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint($"swagger/{apiVersionDescriptor.VersionShort}/swagger.json", apiVersionDescriptor.VersionFull);
     }
-
-    // https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=netcore-cli
 
     c.RoutePrefix = "api/docs";
 });
