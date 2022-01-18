@@ -9,3 +9,10 @@ Full post: https://garethbrown.net/2022/01/18/api-versioning-and-security-with-s
 - Implementations of IOperationFilter and IDocumentFilter to manipulate the parameter options and values passed in requests to API from the Swagger UI
 - Bearer token configuration for OAuth protection of API endpoints (note that OAuth is not fully implemented for this example, only the Swagger configuration)
 - Basic authentication for the Swagger UI
+
+Note the username / password for the Swagger UI as configured is:
+
+```
+"Username": "apiuser",
+"Password": "password"
+```
